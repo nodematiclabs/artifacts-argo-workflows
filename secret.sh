@@ -1,0 +1,1 @@
+kubectl create secret generic gcs-credentials --from-file "serviceAccountKey=key.json"

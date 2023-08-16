@@ -1,0 +1,1 @@
+helm upgrade --install argo argo/argo-workflows --set workflow.serviceAccount.create=true

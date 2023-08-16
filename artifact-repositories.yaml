@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: artifact-repositories
+  annotations:
+    workflows.argoproj.io/default-artifact-repository: default-gcs-artifact-repository
+data:
+  default-gcs-artifact-repository: |
+    gcs:
+      bucket: argo-artifacts-demonstration
+      serviceAccountKeySecret:
+        name: gcs-credentials
+        key: serviceAccountKey
